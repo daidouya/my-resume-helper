@@ -1,5 +1,4 @@
 import base64
-import os
 from backend.database import get_db_connection
 from langchain_community.chat_message_histories import ChatMessageHistory, SQLChatMessageHistory
 
@@ -10,14 +9,6 @@ def decode_file(base64_encoded_str):
 def get_message_history(session_id: str) -> ChatMessageHistory:
     """Get chat history for a session_id"""
     return SQLChatMessageHistory(session_id, "sqlite:///chat_history.db")
-
-# def chat_llm(session_id, input, user_id, resume_str_safe):
-#     """Stream LLM response"""
-#     for output in chain_with_memory.stream(
-#         {"input": input, "resume": resume_str_safe},
-#         config={"configurable": {"session_id": user_id}}
-#     ):
-#         yield output
 
 # Resume database storage
 

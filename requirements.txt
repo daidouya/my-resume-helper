@@ -1,0 +1,13 @@
+langchain>=0.2.0
+langchain-community
+langchain-core
+langchain-ollama
+
+faiss-cpu
+pymupdf
+tavily-python
+ollama
+streamlit
+python-dotenv
+fastapi
+uvicorn
