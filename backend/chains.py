@@ -1,3 +1,5 @@
+import os
+
 from langchain_ollama import ChatOllama
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import (SystemMessagePromptTemplate, 
@@ -13,8 +15,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = "llama3.2:latest"
-base_url = "http://localhost:11434"
+model = os.getenv("MODEL")
+base_url = os.getenv("OLLAMA_BASE_URL")
 
 llm = ChatOllama(base_url=base_url, model=model)
 

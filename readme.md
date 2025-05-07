@@ -38,14 +38,30 @@ app.py                     # Streamlit frontend
 
 ## 🚀 Getting Started
 
-1. Clone the repo
-2. Set up environment
-3. Add Tavily API Key
-    - create a .env file
-    - or export manually
-4. Start backend and launch Streamlit frontend
-    - either do it manually
-    - or use the Dockerfile
+1. **Clone the repo**
+```bash
+git clone https://github.com/daidouya/my-resume-helper.git
+cd my-resume-helper
+```
+2. **Set up environment with Conda**
+```bash
+conda create -n my-resume-helper python=3.12
+conda activate my-resume-helper
+pip install -r requirements.txt
+
+# (optional for python notebook)
+pip install ipykernel
+python -m ipykernel install --user --name=my-resume-helper --display-name "my-resume-helper"
+```
+3. **Add Tavily API Key**
+```bash
+TAVILY_API_KEY= <YOUR API KEY>
+```
+> **Note:** modify other fields as needed
+
+4. **Launch backend and frontend**
+- either do it manually
+- or use the Dockerfile
 
 ## Architecture Overview
 

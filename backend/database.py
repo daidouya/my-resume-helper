@@ -1,7 +1,11 @@
 import sqlite3
 import os
 
-DB_PATH = "resume_data.db"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DB_PATH = os.getenv("RESUME_DATABASE_URL")
 
 # Ensure table exists
 def init_db():

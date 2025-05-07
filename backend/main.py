@@ -6,7 +6,7 @@ import fitz
 import json
 
 from backend.router import chain_with_memory
-from backend.chains import parse_chain, summary_chain, people_chain, people_retriever
+from backend.chains import parse_chain
 from backend.database import init_db
 from backend.helper import (
     store_resume, get_resume,
@@ -14,13 +14,9 @@ from backend.helper import (
 )
 
 from fastapi.responses import StreamingResponse
-from typing import AsyncGenerator
 
 app = FastAPI()
 init_db()
-
-# resume_store = {}
-# resume_parsed_store = {}
 
 @app.post("/upload")
 async def upload_resume(request: Request):
@@ -85,31 +81,6 @@ async def chat(request: Request):
 
     return StreamingResponse(generator(), media_type="text/plain")
 
-# @app.post("/rag")
-# async def chat(request: Request):
-#     """Chat with user regarding the resume with memory enabled"""
-
-#     data = await request.json()
-
-#     user_id = data["user_id"]
-#     input = data["input"]
-
-#     resume_parsed = get_parsed_resume(user_id)
-#     resume_str_safe = resume_parsed.replace("{", "{{").replace("}", "}}")
-
-#     recommend_people_chain = (
-#         summary_chain
-#         | (lambda summary: {"summary": summary, 
-#                             "context": "\n\n".join([
-#                                 f"User: {doc.metadata.get('user_id', 'Unknown')}\nInformation: {doc.page_content}"
-#                                 for doc in people_retriever.invoke(summary)
-#                             ])})
-#         | people_chain
-#     )
-
-#     result = recommend_people_chain.invoke({"resume": resume_str_safe})
-
-#     return {"response": result}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

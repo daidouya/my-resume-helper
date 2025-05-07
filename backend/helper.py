@@ -1,6 +1,12 @@
 import base64
+import os
+from dotenv import load_dotenv
 from backend.database import get_db_connection
 from langchain_community.chat_message_histories import ChatMessageHistory, SQLChatMessageHistory
+
+load_dotenv()
+
+DB_PATH = os.getenv("CHAT_DATABASE_URL")
 
 def decode_file(base64_encoded_str):
     """Decodes a base64 encoded string to raw string correctly."""
@@ -8,7 +14,7 @@ def decode_file(base64_encoded_str):
 
 def get_message_history(session_id: str) -> ChatMessageHistory:
     """Get chat history for a session_id"""
-    return SQLChatMessageHistory(session_id, "sqlite:///chat_history.db")
+    return SQLChatMessageHistory(session_id, DB_PATH)
 
 # Resume database storage
 
