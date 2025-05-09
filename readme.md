@@ -1,5 +1,7 @@
 # 🤖 My-Resume-Helper (an LLM-Powered Resume Assistant)
 
+![System Architecture](assets/architecture.png)
+
 This project is an interactive chatbot that analyzes user resumes, answers questions, provides career suggestions, and recommends similar individuals using Retrieval-Augmented Generation (RAG), external tools like Tavily Search, and agent-based decision routing.
 
 Built with:
@@ -36,6 +38,16 @@ resume_data.db             # SQLite resume raw + parsed storage
 app.py                     # Streamlit frontend
 ```
 
+## 🛠️ Prerequisites
+
+Before running this project, please make sure you have the following installed:
+
+- 🐳 [Docker](https://docs.docker.com/get-docker/) – for running the backend and frontend in a container
+- 🐍 [Miniconda or Anaconda](https://docs.conda.io/en/latest/miniconda.html) – for managing Python environments (optional but recommended)
+- 🤖 [Ollama](https://ollama.com/download) – for running local LLMs like LLaMA 3
+- 🔧 [Git](https://git-scm.com/downloads) – to clone this repository
+
+
 ## 🚀 Getting Started
 
 1. **Clone the repo**
@@ -60,15 +72,12 @@ TAVILY_API_KEY= <YOUR API KEY>
 > **Note:** modify other fields as needed
 
 4. **Launch backend and frontend**
-- either do it manually
-- or use the Dockerfile
+```bash
+# manually
+uvicorn backend.main:app --host 0.0.0.0 --port 8000                 # start backend
+streamlit run app.py --server.port 8501 --server.address 0.0.0.0    # start frontend
 
-## Architecture Overview
-
-- conversation_chain: standard chat with resume context
-- recommend_people_chain: RAG using FAISS to find similar people
-- search_chain: LLM summarizing Tavily web results
-- agent_executor: Agent that decides which tool/chain to invoke
-- RunnableWithMessageHistory: Adds memory to chat sessions
-
-## FAISS Vectore Store
+# (or with Docker)
+docker build -t my-resume-helper .
+docker run -p 8501:8501 -p 8000:8000 my-resume-helper
+```

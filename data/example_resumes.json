@@ -1,0 +1,82 @@
+[
+    {
+      "user_id": "Alice",
+      "summary": "Software engineer with over 5 years of experience in backend development, specializing in Python, AWS, and distributed systems. At Amazon, she led the design of scalable APIs for global payment systems and mentored junior developers."
+    },
+    {
+      "user_id": "Bob",
+      "summary": "Data scientist focused on natural language processing and deep learning. He interned at Google Research, published a paper at ICML, and graduated with honors in Computer Science and Statistics from UC Berkeley."
+    },
+    {
+      "user_id": "Charlie",
+      "summary": "Frontend developer with strong skills in React, TypeScript, and UX/UI design. He has built e-commerce web apps serving over 100,000 users and collaborated with designers to create inclusive user experiences."
+    },
+    {
+      "user_id": "Dana",
+      "summary": "AI researcher with a PhD from Stanford University, specializing in robotics and reinforcement learning. Dana has published in top AI conferences, and her work explores the intersection of autonomy and human-computer collaboration."
+    },
+    {
+      "user_id": "Evan",
+      "summary": "Macroeconomist with a background in fiscal and monetary policy. Evan served as an economic advisor in government think tanks and holds an MPA from Harvard University with a focus on global development."
+    },
+    {
+      "user_id": "Fiona",
+      "summary": "Healthcare analyst and medical writer with experience translating clinical data into accessible content for patients. She previously worked at a digital health startup and holds a Master’s in Public Health."
+    },
+    {
+      "user_id": "Grace",
+      "summary": "High school biology teacher and curriculum designer with a passion for STEM outreach. She developed online lab simulations used by over 10,000 students nationwide and holds a Master's in Education."
+    },
+    {
+      "user_id": "Henry",
+      "summary": "UX designer with a background in cognitive science and HCI. Henry worked at Adobe on design systems and led user research studies that influenced product direction for creative tools."
+    },
+    {
+      "user_id": "Isabel",
+      "summary": "Environmental policy analyst working on climate adaptation strategies at the local government level. Isabel has a Master’s in Environmental Management from Yale and co-authored a citywide resilience plan."
+    },
+    {
+      "user_id": "Jack",
+      "summary": "Mechanical engineer with experience in automotive systems and robotics. Jack worked on electric vehicle prototypes and developed control systems for autonomous driving platforms."
+    },
+    {
+      "user_id": "Kira",
+      "summary": "Digital marketing strategist focused on B2B SaaS growth. At a marketing agency, she led cross-channel campaigns and achieved a 300% ROI increase for several enterprise clients."
+    },
+    {
+      "user_id": "Leo",
+      "summary": "Finance analyst at a leading investment bank, with a concentration in equity research and ESG risk analysis. Leo graduated from Wharton and holds CFA Level II certification."
+    },
+    {
+      "user_id": "Maya",
+      "summary": "Artist and visual storyteller specializing in digital illustration and AR/VR media. Maya’s work has been exhibited in museums and featured in tech-forward public art installations."
+    },
+    {
+      "user_id": "Noah",
+      "summary": "Biomedical researcher focused on gene editing and immunotherapy. He is a postdoctoral fellow at the Broad Institute and co-inventor on two CRISPR-related patents."
+    },
+    {
+      "user_id": "Olivia",
+      "summary": "Entrepreneur and founder of a social enterprise delivering clean water solutions in rural Africa. Olivia has been featured in Forbes 30 Under 30 and is a fellow of Echoing Green."
+    },
+    {
+      "user_id": "Peter",
+      "summary": "Cybersecurity engineer with a background in cryptographic systems and threat modeling. Peter has worked with government contractors and built secure APIs for financial institutions."
+    },
+    {
+      "user_id": "Quinn",
+      "summary": "Journalist and media analyst with expertise in disinformation, social platforms, and political communication. Quinn writes for international outlets and lectures on digital ethics."
+    },
+    {
+      "user_id": "Riya",
+      "summary": "Product manager in edtech, with a focus on building inclusive learning tools. Riya previously worked at Duolingo and led the launch of a mobile-first vocabulary app used in schools."
+    },
+    {
+      "user_id": "Sam",
+      "summary": "Cloud infrastructure engineer and DevOps specialist. Sam built CI/CD pipelines and Kubernetes clusters for a fintech company and is certified in AWS and GCP."
+    },
+    {
+      "user_id": "Tina",
+      "summary": "Cognitive neuroscientist exploring memory, learning, and AI alignment. Tina conducts research at MIT Media Lab and collaborates with interdisciplinary teams to model brain-machine interfaces."
+    }
+  ]  

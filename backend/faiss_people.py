@@ -1,28 +1,17 @@
+import os
+import json
+
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.schema import Document
-import os
 
-example_resumes = [
-    {
-        "user_id": "alice",
-        "summary": "Software engineer with experience in backend development, Python, and AWS. Worked at Amazon and built scalable APIs."
-    },
-    {
-        "user_id": "bob",
-        "summary": "Data scientist with a focus on NLP, Python, and deep learning. Interned at Google and published in ICML."
-    },
-    {
-        "user_id": "charlie",
-        "summary": "Frontend developer with React, TypeScript, and UX design experience. Built web apps for e-commerce startups."
-    },
-    {
-        "user_id": "dana",
-        "summary": "AI researcher with robotics and reinforcement learning background. PhD in Computer Science from Stanford."
-    }
-]
+def build_resume_vectorstore(json_path="data/example_resumes.json", 
+                             index_path="backend/faiss_index_people"):
+    
+    # Load JSON data
+    with open(json_path, "r", encoding="utf-8") as f:
+        example_resumes = json.load(f)
 
-def build_resume_vectorstore(index_path="backend/faiss_index_people"):
     embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
     documents = [
