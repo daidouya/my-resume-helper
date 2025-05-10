@@ -33,8 +33,8 @@ backend/
 ├── helper.py              # Chat memory, file decoding, database actions
 ├── faiss_people.py        # FAISS vectorstore builder & loader
 ├── database.py            # Chat history DB builder
-chat_history.db            # SQLite chat history storage
-resume_data.db             # SQLite resume raw + parsed storage
+chat_history.db            # SQLite chat history storage (created upon code execution)
+resume_data.db             # SQLite resume raw + parsed storage (created upon code execution)
 app.py                     # Streamlit frontend
 ```
 
@@ -67,6 +67,10 @@ python -m ipykernel install --user --name=my-resume-helper --display-name "my-re
 ```
 3. **Add Tavily API Key**
 ```bash
+cp .env.example .env
+```
+Then fill in Tavily api key:
+```env
 TAVILY_API_KEY= <YOUR API KEY>
 ```
 > **Note:** modify other fields as needed
